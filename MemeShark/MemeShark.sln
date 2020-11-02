@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeShark", "MemeShark.csproj", "{1BC7C62E-D112-46A1-8E65-AECCE43E1EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grabber", "..\Grabber\Grabber.csproj", "{E1E2C4D6-EBBB-4FD6-AA81-297036A7475D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BC7C62E-D112-46A1-8E65-AECCE43E1EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC7C62E-D112-46A1-8E65-AECCE43E1EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC7C62E-D112-46A1-8E65-AECCE43E1EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC7C62E-D112-46A1-8E65-AECCE43E1EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E2C4D6-EBBB-4FD6-AA81-297036A7475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E2C4D6-EBBB-4FD6-AA81-297036A7475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E2C4D6-EBBB-4FD6-AA81-297036A7475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E2C4D6-EBBB-4FD6-AA81-297036A7475D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D587C3FD-D93B-4F43-A7D7-435C4F9CC709}
+	EndGlobalSection
+EndGlobal
