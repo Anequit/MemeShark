@@ -1,3 +1,3 @@
-# MemeShark
-What is MemeShark? Well, to put it simply MemeShark is a downloader for instagram.
-Using Selenium to scrape download links off instagram and parsing them for download.
+MemeShark
+=========
+MemeShark is an open-source and cross-platform instagram downloader aimed at providing the most consistent and easy solution to downloading Memes off https://instagram.com.
