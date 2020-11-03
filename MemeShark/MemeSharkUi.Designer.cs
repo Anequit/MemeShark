@@ -91,6 +91,7 @@
             this.BrowserSelector.Name = "BrowserSelector";
             this.BrowserSelector.Size = new System.Drawing.Size(291, 28);
             this.BrowserSelector.TabIndex = 1;
+            this.BrowserSelector.SelectionChangeCommitted += new System.EventHandler(this.BrowserSelector_SelectionChangeCommitted);
             // 
             // Label
             // 

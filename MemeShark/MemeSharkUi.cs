@@ -26,24 +26,34 @@ namespace MemeShark
 
             InitializeComponent();
 
+            // If there isn't a config file present, then it will be created. 
+            // Planned to write defaults if config isn't present. ***********************************************
             if (!File.Exists("config.json"))
                 File.Create("config.json");
         }
 
         private void StartBtn_Click(object sender, EventArgs e)
         {
+            // find all grabber processes and close them
             Process[] processes = Process.GetProcessesByName("Grabber");
             foreach (var process in processes)
                 process.Kill();
 
+            // Start the grabber
             Process.Start("./Grabber/Grabber.exe");
         }
 
         private void StopBtn_Click(object sender, EventArgs e)
         {
+            // Stop all grabber processes
             Process[] processes = Process.GetProcessesByName("Grabber");
             foreach (var process in processes)
                 process.Kill();
+        }
+
+        private void BrowserSelector_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            // Save to config
         }
     }
 }

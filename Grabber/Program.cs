@@ -18,7 +18,7 @@ namespace Grabber
             if (!File.Exists("config.json"))
                 Environment.Exit(2);
 
-            Console.ReadLine();
+            
         }
     }
 }
