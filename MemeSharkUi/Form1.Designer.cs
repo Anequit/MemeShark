@@ -1,6 +1,6 @@
-﻿namespace MemeShark
+﻿namespace MemeSharkUi
 {
-    partial class MemeSharkUi
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // MemeSharkUi
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MemeSharkUi";
-            this.Text = "MemeShark";
-            this.ResumeLayout(false);
-
+            this.Text = "Form1";
         }
 
         #endregion

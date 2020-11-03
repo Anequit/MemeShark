@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Grabber
 {
@@ -14,7 +15,10 @@ namespace Grabber
 		    - Write to links.json
             **/
 
-            Console.WriteLine("Hello World!");
+            if (!File.Exists("config.json"))
+                Environment.Exit(2);
+
+            Console.ReadLine();
         }
     }
 }
