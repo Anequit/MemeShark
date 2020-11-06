@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MemeShark.Core;
+using MemeShark.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +32,7 @@ namespace MemeShark
             // Planned to write defaults if config isn't present. ***********************************************
             if (!File.Exists("config.json"))
                 File.Create("config.json");
+
         }
 
         private void StartBtn_Click(object sender, EventArgs e)
@@ -54,6 +57,7 @@ namespace MemeShark
         private void BrowserSelector_SelectionChangeCommitted(object sender, EventArgs e)
         {
             // Save to config
+
         }
     }
 }
