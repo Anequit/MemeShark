@@ -6,8 +6,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MemeShark.Grabber\MemeShark.Grabber.csproj" />
-  </ItemGroup>
-
 </Project>

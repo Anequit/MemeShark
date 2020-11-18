@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeShark.Core", "MemeShark.Core\MemeShark.Core.csproj", "{0F21DB61-5959-4E59-9B16-09A6BDF957D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeShark", "MemeShark\MemeShark.csproj", "{A06062B5-F1CF-4FA1-A4F5-7C81290A2CC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeShark.Grabber", "MemeShark.Grabber\MemeShark.Grabber.csproj", "{CBEA8776-3CB6-4BDA-A793-881D1F55F206}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeShark.Grabber", "MemeShark.Grabber\MemeShark.Grabber.csproj", "{FB9ED086-9D71-414F-BABA-574BD8FA152C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F21DB61-5959-4E59-9B16-09A6BDF957D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F21DB61-5959-4E59-9B16-09A6BDF957D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F21DB61-5959-4E59-9B16-09A6BDF957D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F21DB61-5959-4E59-9B16-09A6BDF957D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBEA8776-3CB6-4BDA-A793-881D1F55F206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBEA8776-3CB6-4BDA-A793-881D1F55F206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBEA8776-3CB6-4BDA-A793-881D1F55F206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBEA8776-3CB6-4BDA-A793-881D1F55F206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06062B5-F1CF-4FA1-A4F5-7C81290A2CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06062B5-F1CF-4FA1-A4F5-7C81290A2CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06062B5-F1CF-4FA1-A4F5-7C81290A2CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06062B5-F1CF-4FA1-A4F5-7C81290A2CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9ED086-9D71-414F-BABA-574BD8FA152C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9ED086-9D71-414F-BABA-574BD8FA152C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9ED086-9D71-414F-BABA-574BD8FA152C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9ED086-9D71-414F-BABA-574BD8FA152C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace MemeShark.Core
+namespace MemeShark
 {
     /// <summary>
     /// Interaction logic for App.xaml
