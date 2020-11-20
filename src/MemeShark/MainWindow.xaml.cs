@@ -32,7 +32,16 @@ namespace MemeShark
 
         private void Ui_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            
+        }
 
+        private void Toggle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Swap images
+            if (Toggle.Source.ToString().Contains("toggleOff"))
+                Toggle.Source = (ImageSource)FindResource("toggleOn");
+            else
+                Toggle.Source = (ImageSource)FindResource("toggleOff");
         }
     }
 }

@@ -9,10 +9,16 @@
         Title="MemeShark" x:Name="Ui" Width="320" 
         Loaded="Ui_Loaded" Closing="Ui_Closing" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFF3F3F3" Foreground="Black" Height="160" Topmost="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" WindowStyle="None" >
-    <Canvas Background="#FF222222">
+        <Window.Resources>
+            <ResourceDictionary >
+                <ImageSource x:Key="toggleOff">/toggleOff.png</ImageSource>
+                <ImageSource x:Key="toggleOn">/toggleOn.png</ImageSource>
+            </ResourceDictionary>
+        </Window.Resources>
+        <Canvas Background="#FF222222">
         <Rectangle x:Name="Titlebar" Height="20" Canvas.Left="0" Canvas.Top="0" Width="320" Fill="#FF484848" AutomationProperties.Name="Titlebar"/>
         <Ellipse x:Name="Close_Button" Height="10" Width="10" Canvas.Left="305" Canvas.Top="5" Fill="#FFD02020" AutomationProperties.Name="CloseButton" ToolTip="Exit MemeShark" Cursor="Hand"/>
         <TextBlock x:Name="TitlebarTitle" Canvas.Left="120" Canvas.Top="0" Text="MemeShark" TextWrapping="NoWrap" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextTrimming="None" LineStackingStrategy="BlockLineHeight" Foreground="#FFDDDDDD" Width="80" TextAlignment="Center" LineHeight="18" AutomationProperties.Name="Title"/>
-        <Image Height="15" Canvas.Left="20" Canvas.Top="125" Width="30" Source="/Toggle_off.png" Stretch="Uniform" StretchDirection="Both" Cursor="Hand"/>
+        <Image x:Name="Toggle" Height="15" Canvas.Left="20" Canvas.Top="125" Width="30" Source="/toggleOff.png" Stretch="Uniform" StretchDirection="Both" Cursor="Hand" RenderTransformOrigin="0.5,0.5" MouseDown="Toggle_MouseDown"/>
     </Canvas>
 </Window>
