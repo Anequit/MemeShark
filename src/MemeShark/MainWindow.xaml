@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemeShark"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Height="200" Width="300" Content="Make me beep!" Click="Button_Click"/>
-    </Grid>
+        Title="MemeShark" x:Name="Ui" Width="320" 
+        Loaded="Ui_Loaded" Closing="Ui_Closing" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFF3F3F3" Foreground="Black" Height="160" Topmost="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" WindowStyle="None" >
+    <Canvas Background="#FF222222">
+        <Rectangle x:Name="Titlebar" Height="20" Canvas.Left="0" Canvas.Top="0" Width="320" Fill="#FF484848" AutomationProperties.Name="Titlebar"/>
+        <Ellipse x:Name="Close_Button" Height="10" Width="10" Canvas.Left="5" Canvas.Top="5" Fill="#FFD02020" AutomationProperties.Name="CloseButton" ToolTip="Exit MemeShark" Cursor="Hand"/>
+        <TextBlock Canvas.Left="120" Canvas.Top="0" Text="MemeShark" TextWrapping="NoWrap" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextTrimming="None" LineStackingStrategy="BlockLineHeight" Foreground="#FFDDDDDD" Width="80" TextAlignment="Center" LineHeight="18" AutomationProperties.Name="Title"/>
+    </Canvas>
 </Window>

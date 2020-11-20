@@ -25,9 +25,14 @@ namespace MemeShark
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Ui_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
+        }
+
+        private void Ui_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }
