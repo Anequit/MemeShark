@@ -1,9 +1,10 @@
-﻿<Window x:Class="MemeShark.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemeShark"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="MemeShark.MainWindow"
         mc:Ignorable="d"
         Title="MemeShark" x:Name="Ui" Width="320" 
         Loaded="Ui_Loaded" Closing="Ui_Closing" 
@@ -11,6 +12,7 @@
     <Canvas Background="#FF222222">
         <Rectangle x:Name="Titlebar" Height="20" Canvas.Left="0" Canvas.Top="0" Width="320" Fill="#FF484848" AutomationProperties.Name="Titlebar"/>
         <Ellipse x:Name="Close_Button" Height="10" Width="10" Canvas.Left="305" Canvas.Top="5" Fill="#FFD02020" AutomationProperties.Name="CloseButton" ToolTip="Exit MemeShark" Cursor="Hand"/>
-        <TextBlock Canvas.Left="120" Canvas.Top="0" Text="MemeShark" TextWrapping="NoWrap" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextTrimming="None" LineStackingStrategy="BlockLineHeight" Foreground="#FFDDDDDD" Width="80" TextAlignment="Center" LineHeight="18" AutomationProperties.Name="Title"/>
+        <TextBlock x:Name="TitlebarTitle" Canvas.Left="120" Canvas.Top="0" Text="MemeShark" TextWrapping="NoWrap" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextTrimming="None" LineStackingStrategy="BlockLineHeight" Foreground="#FFDDDDDD" Width="80" TextAlignment="Center" LineHeight="18" AutomationProperties.Name="Title"/>
+        <Image Height="15" Canvas.Left="20" Canvas.Top="125" Width="30" Source="/Toggle_off.png" Stretch="Uniform" StretchDirection="Both" Cursor="Hand"/>
     </Canvas>
 </Window>
