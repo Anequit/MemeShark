@@ -58,48 +58,144 @@ namespace MemeShark
         #endregion
 
         #region Browser Buttons
+        bool ChromeState = false;
+        bool FirefoxState = false;
+        bool EdgeState = false;
+
         private void GoogleChrome_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ToggleButton(GoogleChrome, GoogleChromeText);    
+            if (ChromeState)
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, false);
+                ChromeState = false;
+            }
+            else
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, true);
+                ChromeState = true;
+
+                ToggleButton(Firefox, FirefoxText, false);
+                FirefoxState = false;
+
+                ToggleButton(Edge, EdgeText, false);
+                EdgeState = false;
+            }
+            
         }
 
         private void GoogleChromeText_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ToggleButton(GoogleChrome, GoogleChromeText);
+            if (ChromeState)
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, false);
+                ChromeState = false;
+            }
+            else
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, true);
+                ChromeState = true;
+
+                ToggleButton(Firefox, FirefoxText, false);
+                FirefoxState = false;
+
+                ToggleButton(Edge, EdgeText, false);
+                EdgeState = false;
+            }
         }
 
         private void Firefox_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ToggleButton(Firefox, FirefoxText);
+            if (FirefoxState)
+            {
+                ToggleButton(Firefox, FirefoxText, false);
+                FirefoxState = false;
+            }
+            else
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, false);
+                ChromeState = false;
+
+                ToggleButton(Firefox, FirefoxText, true);
+                FirefoxState = true;
+
+                ToggleButton(Edge, EdgeText, false);
+                EdgeState = false;
+            }
         }
 
         private void FirefoxText_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ToggleButton(Firefox, FirefoxText);
+            if (FirefoxState)
+            {
+                ToggleButton(Firefox, FirefoxText, false);
+                FirefoxState = false;
+            }
+            else
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, false);
+                ChromeState = false;
+
+                ToggleButton(Firefox, FirefoxText, true);
+                FirefoxState = true;
+
+                ToggleButton(Edge, EdgeText, false);
+                EdgeState = false;
+            }
         }
 
         private void Edge_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ToggleButton(Edge, EdgeText);
+            if (EdgeState)
+            {
+                ToggleButton(Edge, EdgeText, false);
+                EdgeState = false;
+            }
+            else
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, false);
+                ChromeState = false;
+
+                ToggleButton(Firefox, FirefoxText, false);
+                FirefoxState = false;
+
+                ToggleButton(Edge, EdgeText, true);
+                EdgeState = true;
+            }
         }
 
         private void EdgeText_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ToggleButton(Edge, EdgeText);
+            if (EdgeState)
+            {
+                ToggleButton(Edge, EdgeText, false);
+                EdgeState = false;
+            }
+            else
+            {
+                ToggleButton(GoogleChrome, GoogleChromeText, false);
+                ChromeState = false;
+
+                ToggleButton(Firefox, FirefoxText, false);
+                FirefoxState = false;
+
+                ToggleButton(Edge, EdgeText, true);
+                EdgeState = true;
+            }
         }
 
-        private void ToggleButton(Image Button, TextBlock ButtonText)
+        private void ToggleButton(Image Button, TextBlock ButtonText, bool State)
         {
-            if (Button.Source.ToString().Contains("Unchecked"))
+            if (State)
             {
                 Button.Source = (ImageSource)FindResource("ThinChecked");
                 ButtonText.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
             }
-            else
+            else if (!State)
             {
                 Button.Source = (ImageSource)FindResource("ThinUnchecked");
                 ButtonText.Foreground = new SolidColorBrush(Color.FromRgb(98, 98, 98));
             }
+            
         }
 
         #endregion
