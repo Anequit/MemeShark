@@ -57,7 +57,7 @@ namespace MemeShark
         }
         #endregion
 
-        #region Browsers
+        #region Browser Buttons
         private void GoogleChrome_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ToggleButton(GoogleChrome, GoogleChromeText);    
