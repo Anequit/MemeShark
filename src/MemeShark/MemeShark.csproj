@@ -8,19 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ConnectButton.png" />
+    <None Remove="Download button.png" />
+    <None Remove="DownloadButton.png" />
+    <None Remove="Normal button .png" />
     <None Remove="Rounded Rectangle 2 copy.png" />
-    <None Remove="toggleOff.png" />
-    <None Remove="toggleOn.png" />
+    <None Remove="Thin Multi-choice button.png" />
+    <None Remove="Thin Multi-choice unchecked.png" />
+    <None Remove="ThinChecked.png" />
+    <None Remove="ThinMCButtonUnchecked.png" />
+    <None Remove="ThinUnchecked.png" />
     <None Remove="Toggle_off.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.19" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="toggleOff.png" />
-    <Resource Include="toggleOn.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -48,6 +50,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Download button.png" />
+    <Resource Include="Normal button .png" />
+    <Resource Include="ThinChecked.png" />
+    <Resource Include="ThinUnchecked.png" />
   </ItemGroup>
 
 </Project>

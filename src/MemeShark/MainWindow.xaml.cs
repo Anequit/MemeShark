@@ -35,13 +35,73 @@ namespace MemeShark
             
         }
 
-        private void Toggle_MouseDown(object sender, MouseButtonEventArgs e)
+        #region Title bar
+        private void Titlebar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            // Swap images
-            if (Toggle.Source.ToString().Contains("toggleOff"))
-                Toggle.Source = (ImageSource)FindResource("toggleOn");
-            else
-                Toggle.Source = (ImageSource)FindResource("toggleOff");
+            this.DragMove();
         }
+
+        private void Titlebar_Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void Minimize_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Close_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+        #endregion
+
+        #region Browsers
+        private void GoogleChrome_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToggleButton(GoogleChrome, GoogleChromeText);    
+        }
+
+        private void GoogleChromeText_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToggleButton(GoogleChrome, GoogleChromeText);
+        }
+
+        private void Firefox_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToggleButton(Firefox, FirefoxText);
+        }
+
+        private void FirefoxText_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToggleButton(Firefox, FirefoxText);
+        }
+
+        private void Edge_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToggleButton(Edge, EdgeText);
+        }
+
+        private void EdgeText_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ToggleButton(Edge, EdgeText);
+        }
+
+        private void ToggleButton(Image Button, TextBlock ButtonText)
+        {
+            if (Button.Source.ToString().Contains("Unchecked"))
+            {
+                Button.Source = (ImageSource)FindResource("ThinChecked");
+                ButtonText.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            }
+            else
+            {
+                Button.Source = (ImageSource)FindResource("ThinUnchecked");
+                ButtonText.Foreground = new SolidColorBrush(Color.FromRgb(98, 98, 98));
+            }
+        }
+
+        #endregion
     }
 }
