@@ -25,25 +25,13 @@ namespace MemeShark
             InitializeComponent();
         }
         #region Title bar
-        private void Titlebar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
+        private void Titlebar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => DragMove();
 
-        private void Titlebar_Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
+        private void Titlebar_Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => DragMove();
 
-        private void Minimize_Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
+        private void Minimize_Button_MouseDown(object sender, MouseButtonEventArgs e) => WindowState = WindowState.Minimized;
 
-        private void Close_Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        private void Close_Button_MouseDown(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
         #endregion
     }
 }
