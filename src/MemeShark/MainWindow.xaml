@@ -7,7 +7,6 @@
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="MemeShark.MainWindow"
         mc:Ignorable="d"
         Title="MemeShark" x:Name="Ui" Width="320" 
-        Loaded="Ui_Loaded" Closing="Ui_Closing" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFF3F3F3" Foreground="Black" Height="139" Topmost="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" AllowsTransparency="True" WindowStyle="None" >
     <Window.Resources>
         <ResourceDictionary>
@@ -15,19 +14,12 @@
             <ImageSource x:Key="ThinChecked">/ThinChecked.png</ImageSource>
         </ResourceDictionary>
     </Window.Resources>
-    <Canvas Background="#FF222222" Margin="0,0,0,-1">
-        <Rectangle x:Name="Titlebar" Height="20" Canvas.Left="0" Canvas.Top="0" Width="320" Fill="#FF484848" AutomationProperties.Name="Titlebar" MouseLeftButtonDown="Titlebar_MouseLeftButtonDown"/>
+    <Canvas Background="#FF222222" Margin="0,0,-100,-111">
+        <Rectangle x:Name="Titlebar" Height="20" Canvas.Left="0" Canvas.Top="0" Width="420" Fill="#FF484848" AutomationProperties.Name="Titlebar" MouseLeftButtonDown="Titlebar_MouseLeftButtonDown"/>
         <Ellipse x:Name="Minimize_Button" Height="10" Width="10" Canvas.Left="290" Canvas.Top="5" Fill="#FFE7B229" AutomationProperties.Name="MinimizeButton" ToolTip="Minimize MemeShark" Cursor="Hand" MouseDown="Minimize_Button_MouseDown"/>
         <Ellipse x:Name="Close_Button" Height="10" Width="10" Canvas.Left="305" Canvas.Top="5" Fill="#FFB41A1A" AutomationProperties.Name="CloseButton" ToolTip="Exit MemeShark" Cursor="Hand" MouseDown="Close_Button_MouseDown"/>
         <TextBlock x:Name="Titlebar_Title" Canvas.Left="125" Canvas.Top="5" Text="MemeShark" TextWrapping="NoWrap" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" TextTrimming="None" LineStackingStrategy="BlockLineHeight" Foreground="#FFDDDDDD" Width="70" TextAlignment="Center" LineHeight="12" AutomationProperties.Name="Title" MouseLeftButtonDown="Titlebar_Title_MouseLeftButtonDown"/>
-        <ProgressBar x:Name="Download_Bar" Height="15" Canvas.Left="0" Canvas.Top="125" Width="320" Background="#FF141414" BorderBrush="{x:Null}" Foreground="#FF1E80F9" BorderThickness="0,0,0,0"/>
         <Image x:Name="DownloadButton" Height="45" Canvas.Left="214" Canvas.Top="66.394" Width="96" Source="/Download button.png" Cursor="Hand"/>
-        <Image x:Name="ConnectButton" Height="25" Width="95" Canvas.Left="214.879" Canvas.Top="36.022" Source="/Normal button .png" Cursor="Hand"/>
-        <Image x:Name="GoogleChrome" Height="25" Width="95" Canvas.Left="20" Canvas.Top="30.372" Source="/ThinUnchecked.png" Cursor="Hand" MouseDown="GoogleChrome_MouseDown"/>
-        <TextBlock x:Name="GoogleChromeText" Canvas.Left="40" Canvas.Top="36.4" TextWrapping="NoWrap" Height="14" Width="70" TextAlignment="Left" Text="Google Chrome" LineStackingStrategy="MaxHeight" FontSize="9" LineHeight="72" Foreground="#FF626262" Cursor="Hand" MouseDown="GoogleChromeText_MouseDown"/>
-        <Image x:Name="Firefox" Height="25" Width="95" Canvas.Left="20" Canvas.Top="60.372" Source="/ThinUnchecked.png" Cursor="Hand" MouseDown="Firefox_MouseDown"/>
-        <TextBlock x:Name="FirefoxText" Canvas.Left="40" Canvas.Top="66" TextWrapping="NoWrap" Height="14" Width="70" TextAlignment="Left" Text="Firefox" LineStackingStrategy="MaxHeight" FontSize="9" LineHeight="72" Foreground="#FF626262" Cursor="Hand" MouseDown="FirefoxText_MouseDown"/>
-        <Image x:Name="Edge" Height="25" Width="95" Canvas.Left="20" Canvas.Top="89.628" Source="/ThinUnchecked.png" Cursor="Hand" MouseDown="Edge_MouseDown"/>
-        <TextBlock x:Name="EdgeText" Canvas.Left="40" Canvas.Top="95" TextWrapping="NoWrap" Height="14" Width="70" TextAlignment="Left" Text="Edge" LineStackingStrategy="MaxHeight" FontSize="9" LineHeight="72" Foreground="#FF626262" Cursor="Hand" MouseDown="EdgeText_MouseDown"/>
+        <Image x:Name="ConnectButton" Height="25" Width="95" Canvas.Left="214.879" Canvas.Top="36.022" Source="/Normal button.png" Cursor="Hand"/>
     </Canvas>
 </Window>

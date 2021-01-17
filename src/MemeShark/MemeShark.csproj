@@ -11,7 +11,7 @@
     <None Remove="ConnectButton.png" />
     <None Remove="Download button.png" />
     <None Remove="DownloadButton.png" />
-    <None Remove="Normal button .png" />
+    <None Remove="Normal button.png" />
     <None Remove="Rounded Rectangle 2 copy.png" />
     <None Remove="Thin Multi-choice button.png" />
     <None Remove="Thin Multi-choice unchecked.png" />
@@ -58,7 +58,7 @@
 
   <ItemGroup>
     <Resource Include="Download button.png" />
-    <Resource Include="Normal button .png" />
+    <Resource Include="Normal button.png" />
     <Resource Include="ThinChecked.png" />
     <Resource Include="ThinUnchecked.png" />
   </ItemGroup>
