@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MemeShark
 {
@@ -24,6 +14,7 @@ namespace MemeShark
         {
             InitializeComponent();
         }
+
         #region Title bar
         private void Titlebar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => DragMove();
 
@@ -32,6 +23,16 @@ namespace MemeShark
         private void Minimize_Button_MouseDown(object sender, MouseButtonEventArgs e) => WindowState = WindowState.Minimized;
 
         private void Close_Button_MouseDown(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
+        #endregion
+
+        #region Buttons
+        FileHandling handler = new FileHandling();
+
+        private void ImportText_MouseDown(object sender, MouseButtonEventArgs e) => handler.ImportDialog(); 
+
+        private void DownloadButton_MouseDown(object sender, MouseButtonEventArgs e) => handler.DownloadFiles(SuccessfulDownloadText, FailedDownloadText);
+
+        private void FolderText_MouseDown(object sender, MouseButtonEventArgs e) => handler.FolderDialog();
         #endregion
     }
 }

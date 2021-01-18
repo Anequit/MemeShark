@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:MemeShark"
         xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="MemeShark.MainWindow"
         mc:Ignorable="d"
-        Title="MemeShark" x:Name="Ui" Width="500"  Height="250" 
-        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFF3F3F3" Foreground="Black" Topmost="True" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" AllowsTransparency="True" WindowStyle="None" >
+        Title="MemeShark" x:Name="Ui" Width="500"  Height="214" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFF3F3F3" Foreground="Black" Topmost="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" AllowsTransparency="True" WindowStyle="None" >
     <Window.Resources>
         <ResourceDictionary>
             <ImageSource x:Key="ThinUnchecked">/ThinUnchecked.png</ImageSource>
@@ -19,8 +19,12 @@
         <Ellipse x:Name="Minimize_Button" Height="15" Width="15" Canvas.Left="450" Canvas.Top="8" Fill="#FFE7B229" AutomationProperties.Name="MinimizeButton" ToolTip="Minimize MemeShark" Cursor="Hand" MouseDown="Minimize_Button_MouseDown"/>
         <Ellipse x:Name="Close_Button" Height="15" Width="15" Canvas.Left="475" Fill="#FFB41A1A" AutomationProperties.Name="CloseButton" ToolTip="Exit MemeShark" Cursor="Hand" MouseDown="Close_Button_MouseDown" Canvas.Top="8"/>
         <TextBlock x:Name="Titlebar_Title" Text="MemeShark" TextWrapping="NoWrap" Height="30" TextTrimming="None" LineStackingStrategy="BlockLineHeight" Foreground="#FFDDDDDD" Width="380" TextAlignment="Center" LineHeight="28" AutomationProperties.Name="Title" MouseLeftButtonDown="Titlebar_Title_MouseLeftButtonDown" FontSize="20" Canvas.Left="60"/>
-        <Image x:Name="DownloadButton" Height="65" Canvas.Left="330" Canvas.Top="165" Width="150" Source="/Download button.png" Cursor="Hand" RenderTransformOrigin="0.441,0.462"/>
-        <Image x:Name="ImportButton" Height="40" Width="150" Canvas.Left="330" Canvas.Top="116" Source="/Normal button.png" Cursor="Hand"/>
-        <TextBlock Width="150" Canvas.Left="330" Canvas.Top="116" Height="40" Text="Import" Foreground="#FFEFEFEF" LineStackingStrategy="BlockLineHeight" FontSize="18" TextAlignment="Center" Cursor="Hand" TextWrapping="NoWrap" LineHeight="32" />
+        <Image x:Name="DownloadButton" Height="65" Canvas.Left="11.089" Canvas.Top="140" Width="150" Source="/Download button.png" Cursor="Hand" RenderTransformOrigin="0.441,0.462" MouseDown="DownloadButton_MouseDown"/>
+        <Image x:Name="ImportButton" Height="40" Width="150" Canvas.Left="10" Canvas.Top="90.851" Source="/Normal button.png" Cursor="Hand"/>
+        <TextBlock x:Name="ImportText" Width="150" Canvas.Left="10" Canvas.Top="90.851" Height="40" Text="Import" Foreground="#FFEFEFEF" LineStackingStrategy="BlockLineHeight" FontSize="18" TextAlignment="Center" Cursor="Hand" TextWrapping="NoWrap" LineHeight="32" MouseDown="ImportText_MouseDown" />
+        <Image x:Name="FilePathButton" Height="40" Width="150" Canvas.Left="10" Canvas.Top="40.851" Source="/ThinUnchecked.png" Cursor="Hand"/>
+        <TextBlock x:Name="FolderText" Width="150" Canvas.Left="10" Canvas.Top="40.851" Height="40" Text="Folder" Foreground="#FF626262" LineStackingStrategy="BlockLineHeight" FontSize="18" TextAlignment="Center" Cursor="Hand" TextWrapping="NoWrap" LineHeight="32" MouseDown="FolderText_MouseDown" />
+        <TextBlock x:Name="SuccessfulDownloadText" Width="250" Canvas.Left="240" Canvas.Top="40" Height="40" Text="Successful downloads: 0" Foreground="#FFD6DDDD" LineStackingStrategy="BlockLineHeight" FontSize="18" TextAlignment="Left" Cursor="Arrow" TextWrapping="NoWrap" LineHeight="32"  />
+        <TextBlock x:Name="FailedDownloadText" Width="250" Canvas.Left="240" Canvas.Top="90" Height="40" Text="Failed downloads: 0" Foreground="#FFD6DDDD" LineStackingStrategy="BlockLineHeight" FontSize="18" TextAlignment="Left" Cursor="Arrow" TextWrapping="NoWrap" LineHeight="32"  />
     </Canvas>
 </Window>
