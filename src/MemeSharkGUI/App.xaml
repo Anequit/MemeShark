@@ -1,7 +1,7 @@
-﻿<Application x:Class="MemeShark.App"
+﻿<Application x:Class="MemeSharkGUI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MemeShark"
+             xmlns:local="clr-namespace:MemeSharkGUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
