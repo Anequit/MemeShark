@@ -1,18 +1,18 @@
 ﻿using MemeShark.Core.Common;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Edge;
+using Microsoft.Edge.SeleniumTools;
 
 namespace MemeShark.Core.Drivers.Edge
 {
-    class EdgeDriver : IDriver
+    public class EdgeDriverFactory : IDriver
     {
-        public string Name { get; } = "";
-        public string Directory { get; } = "";
+        public string Name { get; } = "MicrosoftWebDriver";
+        public string Directory { get; } = $"./Drivers/";
 
         private EdgeOptions _options;
         private EdgeDriverService _service;
 
-        public EdgeDriver()
+        public EdgeDriverFactory()
         {
             _options = ConfigureOptions();
             _service = ConfigureService();
@@ -20,6 +20,7 @@ namespace MemeShark.Core.Drivers.Edge
 
         public void Run()
         {
+            EdgeDriver driver = new EdgeDriver(_service, _options);
             throw new System.NotImplementedException();
         }
 
@@ -31,6 +32,8 @@ namespace MemeShark.Core.Drivers.Edge
              * if driver isn't present
              *  return false
              */
+
+
             throw new System.NotImplementedException();
         }
 
@@ -39,7 +42,9 @@ namespace MemeShark.Core.Drivers.Edge
             EdgeOptions options = new EdgeOptions()
             {
                 UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss,
-                PageLoadStrategy = PageLoadStrategy.Normal
+                PageLoadStrategy = PageLoadStrategy.Normal,
+                UseChromium = true,
+                StartPage = "https://instagram.com"
             };
 
             return options;

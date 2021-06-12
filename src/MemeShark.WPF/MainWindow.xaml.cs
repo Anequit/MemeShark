@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemeShark.Core.Drivers.Edge;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace MemeShark.WPF
         public MainWindow()
         {
             InitializeComponent();
+            EdgeDriverHandler bruh = new EdgeDriverHandler();
+            bruh.Run();
         }
     }
 }
