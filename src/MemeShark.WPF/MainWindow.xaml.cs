@@ -24,7 +24,7 @@ namespace MemeShark.WPF
         public MainWindow()
         {
             InitializeComponent();
-            EdgeDriverHandler bruh = new EdgeDriverHandler();
+            EdgeDriverController bruh = new EdgeDriverController();
             bruh.Run();
         }
     }

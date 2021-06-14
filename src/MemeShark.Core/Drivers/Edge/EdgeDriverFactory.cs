@@ -1,30 +1,20 @@
 ﻿using MemeShark.Core.Common;
-using OpenQA.Selenium;
 using Microsoft.Edge.SeleniumTools;
+using OpenQA.Selenium;
 
 namespace MemeShark.Core.Drivers.Edge
 {
-    public class EdgeDriverFactory : IDriver
+    class EdgeDriverFactory : IDriverFactory
     {
-        public string Name { get; } = "MicrosoftWebDriver";
+        public string Name { get; } = "MicrosoftWebDriver.exe";
         public string Directory { get; } = $"./Drivers/";
-
+        
         private EdgeOptions _options;
         private EdgeDriverService _service;
+        
+        public IWebDriver Create() => ConfigureDriver();
 
-        public EdgeDriverFactory()
-        {
-            _options = ConfigureOptions();
-            _service = ConfigureService();
-        }
-
-        public void Run()
-        {
-            EdgeDriver driver = new EdgeDriver(_service, _options);
-            throw new System.NotImplementedException();
-        }
-
-        public bool CheckForDriver()
+        public bool CheckForDriverPresence()
         {
             /* if driver is present
              *  return true
@@ -37,26 +27,32 @@ namespace MemeShark.Core.Drivers.Edge
             throw new System.NotImplementedException();
         }
 
-        private EdgeOptions ConfigureOptions()
+        private IWebDriver ConfigureDriver()
         {
-            EdgeOptions options = new EdgeOptions()
+            ConfigureDriverOptions();
+            ConfigureDriverService();
+
+            return new EdgeDriver(_service, _options);
+        }
+
+        private void ConfigureDriverOptions()
+        {
+            _options = new EdgeOptions()
             {
                 UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss,
                 PageLoadStrategy = PageLoadStrategy.Normal,
                 UseChromium = true,
                 StartPage = "https://instagram.com"
             };
-
-            return options;
         }
 
-        private EdgeDriverService ConfigureService()
+        private void ConfigureDriverService()
         {
-            EdgeDriverService service = EdgeDriverService.CreateDefaultService();
-            service.HideCommandPromptWindow = true;
+            _service = EdgeDriverService.CreateDefaultService();
+            _service.HideCommandPromptWindow = true;
 
-            return service;
+            _service = EdgeDriverService.CreateChromiumService();
+            _service.HideCommandPromptWindow = true;
         }
-
     }
 }
