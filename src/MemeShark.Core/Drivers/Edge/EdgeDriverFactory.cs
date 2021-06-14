@@ -1,6 +1,7 @@
 ﻿using MemeShark.Core.Common;
 using Microsoft.Edge.SeleniumTools;
 using OpenQA.Selenium;
+using System.IO;
 
 namespace MemeShark.Core.Drivers.Edge
 {
@@ -16,15 +17,12 @@ namespace MemeShark.Core.Drivers.Edge
 
         public bool CheckForDriverPresence()
         {
-            /* if driver is present
-             *  return true
-             * 
-             * if driver isn't present
-             *  return false
-             */
+            if (!File.Exists(Directory + Name))
+            {
+                return false;
+            }
 
-
-            throw new System.NotImplementedException();
+            return true;
         }
 
         private IWebDriver ConfigureDriver()
