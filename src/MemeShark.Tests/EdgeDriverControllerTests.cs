@@ -25,6 +25,7 @@ namespace MemeShark.Tests
         [Fact]
         public void CheckIfDriverStops()
         {
+            // Arrange
             bool expected = false;
 
             // Act
@@ -39,9 +40,11 @@ namespace MemeShark.Tests
         [Fact]
         public void CheckIfDriverIsCreated()
         {
+            // Act
             controller.Run();
             controller.Stop();
 
+            // Assert
             Assert.NotNull(controller.Driver);
         }
     }
