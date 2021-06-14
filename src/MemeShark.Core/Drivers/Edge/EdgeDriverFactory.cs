@@ -15,15 +15,7 @@ namespace MemeShark.Core.Drivers.Edge
 
         public IWebDriver Create() => ConfigureDriver();
 
-        public bool CheckForDriverPresence()
-        {
-            if (!File.Exists(Directory + Name))
-            {
-                return false;
-            }
-
-            return true;
-        }
+        public bool CheckForDriverPresence() => File.Exists(Directory + Name);
 
         private IWebDriver ConfigureDriver()
         {
