@@ -7,7 +7,8 @@ namespace MemeShark.Core.Drivers.Edge
     {
         private EdgeDriverFactory _factory;
         private IWebDriver _driver;
-
+        private bool _running = false;
+        
         public EdgeDriverController()
         {
             _factory = new EdgeDriverFactory();
@@ -15,7 +16,23 @@ namespace MemeShark.Core.Drivers.Edge
 
         public bool IsDriverPresent => _factory.CheckForDriverPresence();
 
-        public void Run() => _driver = _factory.Create();
-        public void Stop() => _driver.Close();
+        public bool ISDriverRunning => _running;
+
+        public void Run()
+        {
+            if (_running == true)
+                _driver.Quit();
+
+            _driver = _factory.Create();
+            _running = true;
+        }
+        public void Stop()
+        {
+            if (!_running)
+                return;
+
+            _driver.Quit();
+            _running = false;
+        }
     }
 }
