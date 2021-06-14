@@ -7,8 +7,9 @@ namespace MemeShark.Core.Drivers.Edge
 {
     public class EdgeDriverFactory : IDriverFactory
     {
+        // DO NOT CHANGE DEFAULT NAME
         public string Name { get; } = "msedgedriver.exe";
-        public string Directory { get; } = $"./Drivers/";
+        public string Directory { get; } = "./Drivers/";
         public EdgeOptions Options => _options;
         public EdgeDriverService Service => _service;
 
@@ -40,7 +41,7 @@ namespace MemeShark.Core.Drivers.Edge
 
         public void ConfigureDriverService()
         {
-            _service = EdgeDriverService.CreateChromiumService();
+            _service = EdgeDriverService.CreateChromiumService(Directory, Name);
             _service.HideCommandPromptWindow = true;
         }
     }
