@@ -33,7 +33,7 @@ namespace MemeShark.Core.Drivers.Edge
                 UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss,
                 PageLoadStrategy = PageLoadStrategy.Normal,
                 UseChromium = true,
-                StartPage = "https://instagram.com"
+                StartPage = "https://www.instagram.com/"
             };
         }
 
