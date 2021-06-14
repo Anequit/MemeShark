@@ -48,9 +48,6 @@ namespace MemeShark.Core.Drivers.Edge
 
         private void ConfigureDriverService()
         {
-            _service = EdgeDriverService.CreateDefaultService();
-            _service.HideCommandPromptWindow = true;
-
             _service = EdgeDriverService.CreateChromiumService();
             _service.HideCommandPromptWindow = true;
         }
