@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Drivers\Edge\" />
     <Folder Include="Drivers\Chrome\" />
     <Folder Include="Drivers\Firefox\" />
-    <Folder Include="Drivers\Edge\" />
   </ItemGroup>
 
   <ItemGroup>
