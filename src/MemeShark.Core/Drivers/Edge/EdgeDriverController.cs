@@ -26,6 +26,7 @@ namespace MemeShark.Core.Drivers.Edge
             _driver = _factory.Create();
             _running = true;
         }
+
         public void Stop()
         {
             if (!_running)
