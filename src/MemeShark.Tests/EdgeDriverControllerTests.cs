@@ -36,16 +36,5 @@ namespace MemeShark.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-
-        [Fact]
-        public void CheckIfDriverIsCreated()
-        {
-            // Act
-            controller.Run();
-            controller.Stop();
-
-            // Assert
-            Assert.NotNull(controller.Driver);
-        }
     }
 }
