@@ -16,17 +16,15 @@ namespace MemeShark.Core.Drivers.Edge
         private EdgeOptions _options;
         private EdgeDriverService _service;
 
-        public IWebDriver Create() => ConfigureDriver();
-
-        public bool CheckForDriverPresence() => File.Exists(Directory + Name);
-
-        private IWebDriver ConfigureDriver()
+        public IWebDriver Create() 
         {
             ConfigureDriverOptions();
             ConfigureDriverService();
 
             return new EdgeDriver(_service, _options);
         }
+
+        public bool CheckForDriverPresence() => File.Exists(Directory + Name);
 
         public void ConfigureDriverOptions()
         {
