@@ -11,6 +11,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemeShark.Core", "MemeShark.Core\MemeShark.Core.csproj", "{3553DA7B-A23D-4EE2-905A-2C3A6677E6FE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemeShark.Tests", "MemeShark.Tests\MemeShark.Tests.csproj", "{0DDE7471-6B58-48C8-94CC-69CC36BBF438}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3553DA7B-A23D-4EE2-905A-2C3A6677E6FE} = {3553DA7B-A23D-4EE2-905A-2C3A6677E6FE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
