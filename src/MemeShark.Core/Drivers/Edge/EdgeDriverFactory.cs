@@ -5,10 +5,12 @@ using System.IO;
 
 namespace MemeShark.Core.Drivers.Edge
 {
-    class EdgeDriverFactory : IDriverFactory
+    public class EdgeDriverFactory : IDriverFactory
     {
         public string Name { get; } = "msedgedriver.exe";
         public string Directory { get; } = $"./Drivers/";
+        public EdgeOptions Options => _options;
+        public EdgeDriverService Service => _service;
 
         private EdgeOptions _options;
         private EdgeDriverService _service;
@@ -25,7 +27,7 @@ namespace MemeShark.Core.Drivers.Edge
             return new EdgeDriver(_service, _options);
         }
 
-        private void ConfigureDriverOptions()
+        public void ConfigureDriverOptions()
         {
             _options = new EdgeOptions()
             {
@@ -36,10 +38,9 @@ namespace MemeShark.Core.Drivers.Edge
             };
         }
 
-        private void ConfigureDriverService()
+        public void ConfigureDriverService()
         {
             _service = EdgeDriverService.CreateChromiumService();
-            _service = EdgeDriverService.CreateDefaultService();
             _service.HideCommandPromptWindow = true;
         }
     }

@@ -8,5 +8,7 @@ namespace MemeShark.Core.Common
         public string Directory { get; }
 
         public IWebDriver Create();
+        public void ConfigureDriverOptions();
+        public void ConfigureDriverService();
     }
 }

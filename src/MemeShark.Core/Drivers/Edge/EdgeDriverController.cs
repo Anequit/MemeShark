@@ -15,8 +15,8 @@ namespace MemeShark.Core.Drivers.Edge
         }
 
         public bool IsDriverPresent => _factory.CheckForDriverPresence();
-
         public bool IsDriverRunning => _running;
+        public IWebDriver Driver => _driver;
 
         public void Run()
         {
