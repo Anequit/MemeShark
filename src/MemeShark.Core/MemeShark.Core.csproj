@@ -14,10 +14,4 @@
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="91.0.864.37" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Edge\" />
-    <Folder Include="Firefox\" />
-    <Folder Include="WebDrivers\Common\" />
-  </ItemGroup>
-
 </Project>
