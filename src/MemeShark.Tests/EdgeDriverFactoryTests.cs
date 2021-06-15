@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using MemeShark.Core.WebDrivers.Edge;
+using MemeShark.Core.Edge;
 
 namespace MemeShark.Tests
 {
