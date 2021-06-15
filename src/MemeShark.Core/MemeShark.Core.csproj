@@ -9,13 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Drivers\Edge\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Edge.SeleniumTools" Version="3.141.2" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="91.0.864.37" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Edge\" />
+    <Folder Include="Firefox\" />
+    <Folder Include="WebDrivers\Common\" />
   </ItemGroup>
 
 </Project>

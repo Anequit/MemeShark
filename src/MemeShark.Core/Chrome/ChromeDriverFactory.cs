@@ -1,10 +1,9 @@
-﻿using System;
-using System.IO;
-using MemeShark.Core.Common;
+﻿using System.IO;
+using MemeShark.Core.Entities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace MemeShark.Core.Drivers.Chrome
+namespace MemeShark.Core.Chrome
 {
     public class ChromeDriverFactory : IDriverFactory
     {
@@ -13,15 +12,12 @@ namespace MemeShark.Core.Drivers.Chrome
 
         public ChromeDriverFactory()
         {
-            if (Name != "chromedriver.exe")
-                throw new Exception("Incorrect chrome driver name. Name should be chromedriver.exe");
-
             ConfigureDriverOptions();
             ConfigureDriverService();
         }
 
         // DO NOT CHANGE DEFAULT NAME
-        public string Name { get; } = "chromedriver.exe";
+        public string Name { get; } = DriverName.Chrome;
         public string Directory { get; } = "./Drivers/";
         public ChromeOptions Options => _options;
         public ChromeDriverService Service => _service;

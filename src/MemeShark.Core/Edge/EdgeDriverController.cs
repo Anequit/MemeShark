@@ -1,7 +1,6 @@
-﻿using MemeShark.Core.Common;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
-namespace MemeShark.Core.Drivers.Edge
+namespace MemeShark.Core.Edge
 {
     public class EdgeDriverController : IDriverController
     {

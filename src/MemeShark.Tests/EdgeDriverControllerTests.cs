@@ -1,4 +1,4 @@
-﻿using MemeShark.Core.Drivers.Edge;
+﻿using MemeShark.Core.WebDrivers.Edge;
 using Xunit;
 
 namespace MemeShark.Tests

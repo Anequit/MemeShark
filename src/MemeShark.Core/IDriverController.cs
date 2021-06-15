@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace MemeShark.Core.Common
+namespace MemeShark.Core
 {
     interface IDriverController
     {
