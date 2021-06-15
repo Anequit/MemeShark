@@ -7,22 +7,22 @@ namespace MemeShark.Core.Drivers.Edge
 {
     public class EdgeDriverFactory : IDriverFactory
     {
+        private EdgeOptions _options;
+        private EdgeDriverService _service;
+
+        public EdgeDriverFactory()
+        {
+            ConfigureDriverOptions();
+            ConfigureDriverService();
+        }
+
         // DO NOT CHANGE DEFAULT NAME
         public string Name { get; } = "msedgedriver.exe";
         public string Directory { get; } = "./Drivers/";
         public EdgeOptions Options => _options;
         public EdgeDriverService Service => _service;
 
-        private EdgeOptions _options;
-        private EdgeDriverService _service;
-
-        public IWebDriver Create() 
-        {
-            ConfigureDriverOptions();
-            ConfigureDriverService();
-
-            return new EdgeDriver(_service, _options);
-        }
+        public IWebDriver Create() => new EdgeDriver(_service, _options);
 
         public bool CheckForDriverPresence() => File.Exists(Directory + Name);
 
@@ -32,8 +32,7 @@ namespace MemeShark.Core.Drivers.Edge
             {
                 UnhandledPromptBehavior = UnhandledPromptBehavior.Dismiss,
                 PageLoadStrategy = PageLoadStrategy.Normal,
-                UseChromium = true,
-                StartPage = "https://www.instagram.com/"
+                UseChromium = true
             };
         }
 
