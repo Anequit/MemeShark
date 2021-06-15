@@ -1,4 +1,5 @@
 ﻿using MemeShark.Core.Common;
+using System;
 using Microsoft.Edge.SeleniumTools;
 using OpenQA.Selenium;
 using System.IO;
@@ -12,6 +13,9 @@ namespace MemeShark.Core.Drivers.Edge
 
         public EdgeDriverFactory()
         {
+            if (Name != "msedgedriver.exe")
+                throw new Exception("Incorrect edge driver name. Name should be msedgedriver.exe");
+
             ConfigureDriverOptions();
             ConfigureDriverService();
         }
